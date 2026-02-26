@@ -15,6 +15,10 @@ body{
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
 }
 .header-left,
 .header-center,
@@ -102,6 +106,9 @@ button:hover{
     padding: 12px 0;
     height: calc(100vh - 56px);
     overflow-y: auto;
+    position: sticky;
+    top: 56px;
+
 }
 .sidebar nav{
     display: flex;
@@ -267,6 +274,10 @@ grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 padding: 0 12px;
 height: 52px;
 }
+.sidebar {
+  display: none;
+}
+
 .header-left,
 .header-right {
 gap: 8px;
@@ -293,4 +304,65 @@ padding: 8px 0;
 padding: 6px 12px;
 font-size: 13px;
 }
+}
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  margin-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ff0000;
+  display: inline-block;
+}
+.chips {
+  scrollbar-width: none;
+}
+.chips::-webkit-scrollbar {
+  display: none;
+}
+
+.footer {
+  background-color: white;
+  border-top: 1px solid #e5e5e5;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #606060;
+  font-size: 14px;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-link {
+  color: #606060;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.social-link:hover {
+  color: #030303;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  background-color: #030303;
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.2s;
+}
+
+.back-to-top:hover {
+  background-color: #ff0000;
 }
